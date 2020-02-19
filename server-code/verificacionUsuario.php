@@ -16,7 +16,8 @@ if (isset($_POST) && !empty($_POST)) {
         
         while ($row = mysqli_fetch_assoc($result)) {
             if ($row['rol'] === "1") {
-                $_SESSION['user'] = $row["usario"];
+                var_dump($row);
+                $_SESSION['user'] = $row["usuario"];
                 $_SESSION['role'] = $row["rol"];
                 header("Location: ../admin.php");
             }

@@ -6,8 +6,9 @@ function terminarSesion() {
     session_destroy(); 
 }
 
-if (!isset($_SESSION['user']) || $_SESSION['role']!=1) {
+if (!isset($_SESSION['user']) || $_SESSION['role']!='1') {
     header('Location: login.php');
+
 }
 
 if (isset($_POST['botonSalir'])) {
