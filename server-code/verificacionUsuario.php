@@ -25,6 +25,8 @@ if (isset($_POST) && !empty($_POST)) {
                 $_SESSION['user'] = $row["usuario"];
                 $_SESSION['role'] = $row["rol"];
                 header('Location: ../user.php');
+                // header('Location: ../templates/nav-template-user.php');
+                
             }
         }
     } else {
