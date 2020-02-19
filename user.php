@@ -1,3 +1,23 @@
+<?php
+
+session_start();
+
+function terminarSesion() {
+    session_unset();
+    session_destroy(); 
+}
+
+if (!isset($_SESSION['user']) || $_SESSION['role']!='Admin' && $_SESSION['role']!='User') {
+    header('Location: login.php');
+}
+
+if (isset($_POST['botonSalir'])) {
+    terminarSesion();
+    header('Location: login.php');
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -9,11 +29,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Pagina usuario</title>
 </head>
 
 <body>
-    <h1>Hello User</h1>
+    <h1>Hola <?= $_SESSION['user'] ?></h1>
+    <form action="admin.php" method="post">
+        <button name="botonSalir">Salir</button>
+    </form>
 </body>
 
 </html>

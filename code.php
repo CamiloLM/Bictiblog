@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $server = 'localhost';
 $user = 'root';
 $pass = '';
@@ -17,15 +19,17 @@ if (isset($_POST) && !empty($_POST)) {
     if(mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             if ($row['rol'] === 'Admin') {
-                $_SESSION['LoginUser'] = $row["Username"];
+                $_SESSION['user'] = $row["correo"];
+                $_SESSION['role'] = $row["rol"];
                 header('Location: admin.php');
             }
             if ($row['rol'] === 'User') {
-                $_SESSION['LoginUser'] = $row["Username"];
+                $_SESSION['user'] = $row["correo"];
+                $_SESSION['role'] = $row["rol"];
                 header('Location: user.php');
             }
         }
     } else {
-        header('Location: index.php');
+        header('Location: login.php');
     }
 }
