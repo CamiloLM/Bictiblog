@@ -15,10 +15,16 @@
 }
 
 body{
+    border-top: orange 25px solid;
     background-color: #f8f6f6;
 }
 /* Nav */
-
+.logo{
+    border: orange 10px solid;
+    padding: 10px;
+    border-radius: 100%;
+    margin-left: 30px;
+}
 .dropdown-content {
     display: none;
     position: absolute;
@@ -57,7 +63,7 @@ body{
     background-size:cover;
     width: 100%;
     max-width: 500px;
-    margin:200px auto;
+    margin:8vh auto;
     color: #fff;
     border-radius: 5px;
 

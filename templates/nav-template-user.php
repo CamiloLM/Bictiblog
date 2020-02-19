@@ -9,7 +9,7 @@
 <body>
 <nav class="nav-bar sticky-top">
         <div class="nav-bar-header">
-           <img src="images/logo.png" alt=""><a class = "navbar-brand" href="#"></a>
+           <img src="images/logo.png" alt="">
         </div>
         <div class="nav-options">
              <ul class="nav navbar-nav" >
@@ -21,7 +21,11 @@
             </ul>
         </div>
         <ul>
-            <h1>Hola <?= $_SESSION['user'] ?></h1>
+            <span><img src="images/icons/person-24px.svg" alt=""></span>
+            <h3>Hola, <?= $_SESSION['user'] ?></h3>
+            <form action="admin.php" method="post" class="nav-login">
+                <button name="botonSalir">Salir</button>
+            </form>
         </ul>
         </div>
     </div>

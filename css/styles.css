@@ -32,14 +32,18 @@ nav li a{
  color: orangered;
  border-bottom:orangered 1px solid ;
 }
-.nav-login a{
+.nav-login a, button{
     background: black;
     color: white;
     padding: 8px;
     border-radius: 5px;
 }
+.nav-login button{
+    font-size: 12px;
+    margin-left: 20px;
+}
 
-.nav-login a:hover{
+.nav-login a, button:hover{
     background: orange;
     text-decoration: none;
     color: black;

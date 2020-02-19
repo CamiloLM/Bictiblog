@@ -23,6 +23,9 @@ if (isset($_GET['error'])) {
     <link rel="icon" href="../assets/img/logo.jpeg">
 </head>
 <body>
+    <div class="container">
+        <a href="index,php"><img src="images/bit.png" class="logo" alt=""></a>
+    </div>
     <div class="Moises">
         <div class="toggle">
             <span>Crear cuenta</span>
