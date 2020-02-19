@@ -12,37 +12,52 @@ if (isset($_GET['error'])) {
 
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <title>Inicia Sesion / Registrate</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style_login.css">
+    <link rel="icon" href="../assets/img/logo.jpeg">
 </head>
-
 <body>
-    <form method="POST" action="server-code/verificacionUsuario.php">
-        <div class="form-group">
-            <label for="inputEmail">Email address</label>
-            <input type="email" class="form-control" name="inputEmail" id="inputEmail" aria-describedby="emailHelp">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <div class="Moises">
+        <div class="toggle">
+            <span>Crear cuenta</span>
         </div>
-        <div class="form-group">
-            <label for="inputPassword">Password</label>
-            <input type="password" class="form-control" name="inputPassword" id="inputPassword">
-        </div>
-        <button class="btn btn-primary">Submit</button>
-    </form>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <div class="formulario">
+            <h2>Iniciar Sesión</h2>
+            <form method="POST" action="server-code/verificacionUsuario.php">
+            <input type="text" name="tnombre" placeholder="nombre" required>
+            <input type="password" name="usupas" placeholder="Contraseña" required>
+            <input type="submit" value="Iniciar Sesión">
+        </form>
+        </div>
+
+        <div class="formulario">
+            <h2>Crea tu cuenta</h2>
+            <form action="server-code/verificacionUsuario.php" >
+                    <input name="cedUsuario" placeholder="Usuario"  Type ="text" ></input><BR>
+                    <input  name="claveUs" placeholder="Contraseña" Type ="password" ></input><BR>
+                    <input  name="email" placeholder="Correo" Type ="Email" ></input><BR>
+                        <button  Type="submit" onclick=""> CREAR</button>
+            
+        </form>
+        </div>
+
+
+        <div class="reset-password">
+            <a href="#">Olvide Mi Contraseña?</a>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-</body>
 
+</body>
 </html>
