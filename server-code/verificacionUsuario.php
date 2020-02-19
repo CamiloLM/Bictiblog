@@ -2,29 +2,32 @@
 
 session_start();
 
+
 include('database.php');
-
 if (isset($_POST) && !empty($_POST)) {
-    $nombre = $_POST['tnombre'];
-    $contraseña = $_POST['usupas'];
-
-    $sql = "SELECT * FROM usuarios WHERE nombre = '$nombre' AND contrasena = '$contraseña'";
+    $usuario = $_POST['tnombre'];
+    $contrasena = $_POST['usupas'];
+    
+    $sql = "SELECT * FROM usuarios WHERE usuario = '$usuario' AND  contrasena ='$contrasena'";
     $result = mysqli_query($conn, $sql);
+    var_dump(mysqli_num_rows($result));
     
     if(mysqli_num_rows($result) > 0) {
+        
         while ($row = mysqli_fetch_assoc($result)) {
-            if ($row['rol'] === '0') {
-                $_SESSION['user'] = $row["nombre"];
+            if ($row['rol'] === "1") {
+                $_SESSION['user'] = $row["usario"];
                 $_SESSION['role'] = $row["rol"];
-                header('Location: ../admin.php');
+                header("Location: ../admin.php");
             }
-            if ($row['rol'] === 'User') {
-                $_SESSION['user'] = $row["nombre"];
+            if ($row['rol'] === "0") {
+                $_SESSION['user'] = $row["usuario"];
                 $_SESSION['role'] = $row["rol"];
                 header('Location: ../user.php');
             }
         }
     } else {
+        echo "Error";
         header('Location: ../login.php?error');
     }
 }

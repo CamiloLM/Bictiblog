@@ -7,7 +7,7 @@ function terminarSesion() {
     session_destroy(); 
 }
 
-if (!isset($_SESSION['user']) || $_SESSION['role']!='Admin' && $_SESSION['role']!='User') {
+if (!isset($_SESSION['user']) || $_SESSION['role']!=1 && $_SESSION['role']!=0) {
     header('Location: login.php');
 }
 
