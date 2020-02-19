@@ -3,7 +3,7 @@
 $server = 'localhost';
 $user = 'root';
 $pass = '';
-$db = 'login';
+$db = 'bictiblog';
 
 
 $conn = mysqli_connect($server, $user, $pass, $db);
