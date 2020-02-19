@@ -2,12 +2,7 @@
 
 session_start();
 
-$server = 'localhost';
-$user = 'root';
-$pass = '';
-$db = 'login';
-
-$conn = mysqli_connect($server, $user, $pass, $db);
+include('database.php');
 
 if (isset($_POST) && !empty($_POST)) {
     $correo = $_POST['inputEmail'];
@@ -21,15 +16,15 @@ if (isset($_POST) && !empty($_POST)) {
             if ($row['rol'] === 'Admin') {
                 $_SESSION['user'] = $row["correo"];
                 $_SESSION['role'] = $row["rol"];
-                header('Location: admin.php');
+                header('Location: ../admin.php');
             }
             if ($row['rol'] === 'User') {
                 $_SESSION['user'] = $row["correo"];
                 $_SESSION['role'] = $row["rol"];
-                header('Location: user.php');
+                header('Location: ../user.php');
             }
         }
     } else {
-        header('Location: login.php');
+        header('Location: ../login.php?error');
     }
 }
