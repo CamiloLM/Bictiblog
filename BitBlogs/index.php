@@ -23,7 +23,7 @@
                 <li class="item"><a href="#noticias" class="nav-link"> Noticias </a></li>
                 <li class="item"><a href="#" class="nav-link"> Tecnologia </a> </li>
                 <li class="item"><a href="#" class="nav-link"> Foro </a></li>
-                <li class="item"><span><a href=""><img src="images/icons/search-24px.svg" alt=""></a></span></li>
+                <li class="item"><span><a href="#search"><img src="images/icons/search-24px.svg" alt=""></a></span></li>
             </ul>
         </div>
         <ul class ="nav-login">
@@ -144,16 +144,20 @@
 </section>
 
 <!---************Barra busqueda*************---->
-<div class="search">
+<div class="search" id="search">
+    <div class="container"><h3>Buscar</h3>
+        <input type="text" placeholder="busqueda"><span><img src="images/icons/search-24px.svg" alt=""></span>
+    </div>
 </div>
 <section class="container">
+
  <div class="row"> 
     <div class="col">     
         <div class="card mb-3" style="max-width: 500px;">
             <div class="row no-gutters">
                 <div class="col-md-4">
                     <img src="..." class="card-img" alt="...">
-                </div>
+                </div> 
                 <div class="col-md-8">
                     <div class="card-body">
                     <h5 class="card-title">Mas noticia</h5>
@@ -213,7 +217,12 @@
 </div>
 </section>
 <footer>
-
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col"><span style="display:inline;"><h6>Bictia</h6>- Todos los derechos reservados</span></div>
+        </div>
+    </div>
 </footer>
 
 </body>

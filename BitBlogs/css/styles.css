@@ -93,8 +93,21 @@ section h1, .search{
     height: 50px;
     background: orange;
     margin-top: 80px;
+    padding: 5px;
 }
-
+.search .container{
+    display: flex;
+    align-items: center;
+}
+.search h3{
+    padding-right: 10px;
+}
+.search input{
+    height: 30px;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 15px;
+}
 footer{
     background:#343a40;
     height: 100px;
