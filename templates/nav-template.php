@@ -10,21 +10,27 @@
 <nav class="nav-bar sticky-top">
         <div class="nav-bar-header">
            <img src="images/logo.png" alt=""><a class = "navbar-brand" href="#"></a>
-        </div>
+        </div>    
         <div class="nav-options">
-             <ul class="nav navbar-nav" >
+            <ul class="nav navbar-nav" >
                 <li class="item"><a href="index.php" class="nav-link"> Inicio </a></li>
-                <li class="item"><a href="#noticias" class="nav-link"> Noticias </a></li>
-                <li class="item"><a href="#" class="nav-link"> Tecnologia </a> </li>
-                <li class="item"><a href="#" class="nav-link"> Foro </a></li>
+                <li class="item"><a href="#noticias" class="nav-link"> Noticias </a>
+                    <ul>
+                        <li class="category">categ 1</li>
+                        <li class="category">categ 2</li>
+                        <li class="category">categ 3</li>
+                        <li class="category">categ 4</li>
+                    </ul>
+                </li>
+                <li class="item"><a href="#" class="nav-link"> Acerca de </a> </li>
                 <li class="item"><span><a href="search.php"><img src="images/icons/search-24px.svg" alt=""></a></span></li>
             </ul>
         </div>
-        <ul class ="nav-login">
-            <li><a href="login.php"><span class="glyphicon-log-in">Iniciar Sesion</span></a></li>
-        </ul>
+             <ul class ="nav-login">
+                <li><a href="login.php"><span class="glyphicon-log-in">Iniciar Sesion</span></a></li>
+            </ul>
         </div>
-    </div>
+    </div>        
 </nav>
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
