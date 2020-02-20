@@ -24,7 +24,7 @@ if (isset($_POST) && !empty($_POST)) {
             if ($row['rol'] === "0") {
                 $_SESSION['user'] = $row["usuario"];
                 $_SESSION['role'] = $row["rol"];
-                header('Location: ../user.php');
+                header('Location: ../index.php');
                 // header('Location: ../templates/nav-template-user.php');
                 
             }
