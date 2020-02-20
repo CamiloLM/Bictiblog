@@ -1,6 +1,6 @@
 <?php
 
-require('templates/nav-template-user.php');
+require('templates/nav-template.php');
 
 if (!isset($_SESSION['user']) || $_SESSION['role']!='1') {
     header('Location: login.php');

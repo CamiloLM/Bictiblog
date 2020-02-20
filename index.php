@@ -1,5 +1,5 @@
 <?php 
-    include 'templates/nav-template-user.php';
+    include 'templates/nav-template.php';
 ?>
 
 <head>

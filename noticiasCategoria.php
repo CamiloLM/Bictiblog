@@ -1,6 +1,6 @@
 <?php
 
-require('templates/nav-template-user.php');
+require('templates/nav-template.php');
 
 ?>
 
