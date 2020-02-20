@@ -1,34 +1,62 @@
+<?php
+session_start();
+
+if (isset($_SESSION) && !empty($_SESSION)) {
+    $mensaje = " <form action='templates/nav-template.php' method='post' class='nav-login'>
+    <span><img src='images/icons/person-24px.svg' alt=''></span>
+        <h4 style= 'padding:5px;'>Hola, " . $_SESSION['user'] . "</h4>
+       
+            <button class='btn-bit' name='botonSalir'>Cerrar</button>
+        </form>";
+} else {
+    $mensaje = "<ul class ='nav-login'>
+        <li><a href='login.php'><span class='glyphicon-log-in'>Iniciar Sesion</span></a></li>
+    </ul>";
+}
+
+// Funcion para terminar la sesion
+function terminarSesion()
+{
+    session_unset();
+    session_destroy();
+}
+
+// Evento para el boton
+if (isset($_POST['botonSalir'])) {
+    terminarSesion();
+    header('Location: ../index.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Bict-Blog</title>
 </head>
 <body>
 <nav class="nav-bar sticky-top">
         <div class="nav-bar-header">
            <img src="images/logo.png" alt=""><a class = "navbar-brand" href="#"></a>
-        </div>
+        </div>    
         <div class="nav-options">
-             <ul class="nav navbar-nav" >
+            <ul class="nav navbar-nav" >
                 <li class="item"><a href="index.php" class="nav-link"> Inicio </a></li>
-                <li class="item"><a href="#noticias" class="nav-link"> Noticias </a></li>
-                <li class="item"><a href="#" class="nav-link"> Tecnologia </a> </li>
-                <li class="item"><a href="#" class="nav-link"> Foro </a></li>
+                <li class="item"><a href="#noticias" class="nav-link"> Noticias </a>
+                    <ul class="categorias">
+                        <li class="category"><a href="noticiasCategoria.php">categ 1</a> </li>
+                        <li class="category"><a href="">categ 2</a> </li>
+                        <li class="category"><a href="">categ 3</a> </li>
+                        <li class="category"><a href="">categ 4</a> </li>
+                    </ul>
+                </li>
+                <li class="item"><a href="#" class="nav-link"> Acerca de </a> </li>
                 <li class="item"><span><a href="search.php"><img src="images/icons/search-24px.svg" alt=""></a></span></li>
             </ul>
         </div>
-        <ul class ="nav-login">
-            <li><a href="login.php"><span class="glyphicon-log-in">Iniciar Sesion</span></a></li>
-        </ul>
+             <?= $mensaje ?>
+                <!-- <li><a href="login.php"><span class="glyphicon-log-in">Iniciar Sesion</span></a></li> -->
         </div>
-    </div>
+    </div>        
 </nav>
 </body>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-latest.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-</html>

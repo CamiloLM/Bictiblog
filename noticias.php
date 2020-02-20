@@ -11,7 +11,6 @@
     include 'templates/nav-template.php';
 ?>
 
-
 <section class="slide-news">
  <div class="row"> 
 <div class="titulos" ><h3>Ciencia </h3></div>  
@@ -183,5 +182,12 @@
 <?php 
     include 'templates/footer-template.php';
 ?>
+
+
+
+<form action="server-code/consultarBlog.php">
+<input type="submit" value="holi mama ">
+</form>
+
 </body>
 </html>

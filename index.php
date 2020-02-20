@@ -2,6 +2,9 @@
     include 'templates/nav-template.php';
 ?>
 
+<head>
+    <title>Bictiblog</title>
+</head>
 
 <!---******Carousel*******--->
 <section>
