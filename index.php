@@ -1,7 +1,10 @@
 <?php 
-    include 'templates/nav-template.php';
+    include 'templates/nav-template-user.php';
 ?>
 
+<head>
+    <title>Bictiblog</title>
+</head>
 
 <!---******Carousel*******--->
 <section>
