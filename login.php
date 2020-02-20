@@ -24,7 +24,7 @@ if (isset($_GET['error'])) {
 </head>
 <body>
     <div class="container">
-        <a href="index,php"><img src="images/bit.png" class="logo" alt=""></a>
+        <a href="index.php"><img src="images/bit.png" class="logo" alt=""></a>
     </div>
     <div class="Moises">
         <div class="toggle">
