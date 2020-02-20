@@ -23,6 +23,9 @@ if (isset($_GET['error'])) {
     <link rel="icon" href="../assets/img/logo.jpeg">
 </head>
 <body>
+    <div class="container">
+        <a href="index,php"><img src="images/bit.png" class="logo" alt=""></a>
+    </div>
     <div class="Moises">
         <div class="toggle">
             <span>Crear cuenta</span>
@@ -31,7 +34,7 @@ if (isset($_GET['error'])) {
         <div class="formulario">
             <h2>Iniciar Sesión</h2>
             <form method="POST" action="server-code/verificacionUsuario.php">
-            <input type="text" name="tnombre" placeholder="nombre" required>
+            <input type="text" name="tnombre" placeholder="Usuario" required>
             <input type="password" name="usupas" placeholder="Contraseña" required>
             <input type="submit" value="Iniciar Sesión">
         </form>
@@ -39,11 +42,11 @@ if (isset($_GET['error'])) {
 
         <div class="formulario">
             <h2>Crea tu cuenta</h2>
-            <form action="server-code/verificacionUsuario.php" >
-                    <input name="cedUsuario" placeholder="Usuario"  Type ="text" ></input><BR>
-                    <input  name="claveUs" placeholder="Contraseña" Type ="password" ></input><BR>
-                    <input  name="email" placeholder="Correo" Type ="Email" ></input><BR>
-                        <button  Type="submit" onclick=""> CREAR</button>
+            <form method="POST" action="server-code/crearUsuario.php" >
+                    <input name="crearusuario" placeholder="Usuario"  Type ="text" required></input><BR>
+                    <input  name="crearclave" placeholder="Contraseña" Type ="password" required></input><BR>
+                    <input  name="crearemail" placeholder="Correo" Type ="Email" required></input><BR>
+                    <input type="submit" value="Registrate">
             
         </form>
         </div>

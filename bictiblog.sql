@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-02-2020 a las 18:02:10
+-- Tiempo de generación: 19-02-2020 a las 17:44:32
 -- Versión del servidor: 10.1.30-MariaDB
 -- Versión de PHP: 7.2.1
 
@@ -54,22 +54,49 @@ INSERT INTO `post` (`titulo`, `contenido`, `categoria`, `fecha_edicion`) VALUES
 --
 
 CREATE TABLE `usuarios` (
-  `cedula` int(20) DEFAULT NULL,
-  `nombre` varchar(20) NOT NULL,
-  `apellido` varchar(20) NOT NULL,
-  `direccion` varchar(20) NOT NULL,
-  `sitio_wed` varchar(20) NOT NULL,
-  `rol` varchar(20) NOT NULL,
-  `contrasena` int(11) NOT NULL
+  `id` int(11) NOT NULL,
+  `usuario` varchar(20) NOT NULL,
+  `contrasena` varchar(20) NOT NULL,
+  `correo` varchar(20) NOT NULL,
+  `nombre` varchar(20) DEFAULT NULL,
+  `apellido` varchar(20) DEFAULT NULL,
+  `direccion` varchar(20) DEFAULT NULL,
+  `celular` int(20) DEFAULT NULL,
+  `sitioWed` varchar(20) DEFAULT NULL,
+  `profesion` varchar(20) DEFAULT NULL,
+  `rol` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`cedula`, `nombre`, `apellido`, `direccion`, `sitio_wed`, `rol`, `contrasena`) VALUES
-(1234567890, 'yuliano', 'quiñones', 'calle28 su r# 2b-39', 'el papa de los amore', '1', 12345678),
-(12345678, 'camilo', 'londoño', 'calle 34 32-32', 'el papa de los amore', '2', 12345678);
+INSERT INTO `usuarios` (`id`, `usuario`, `contrasena`, `correo`, `nombre`, `apellido`, `direccion`, `celular`, `sitioWed`, `profesion`, `rol`) VALUES
+(1, 'admin', 'admin123', 'yulianosalvatore2001', 'yuliano', 'quiñones', 'call23', 324378868, 'www.abc.com', 'el administrador', 1),
+(123456, 'yuliano', 'yuliano', 'yuliano@vmail.com', '123456', 'yuliano', 'yuliano', 0, '123456', 'yuliano', 0),
+(123460, 'julian', '12345', 'juliano@gmial.com', NULL, NULL, NULL, NULL, NULL, NULL, 0),
+(123461, 'Nestor', 'nestor123', 'nestor.guzman@gmail.', NULL, NULL, NULL, NULL, NULL, NULL, 0),
+(123462, 'jairo', 'jairo123', 'jairo@fjwqgf', NULL, NULL, NULL, NULL, NULL, NULL, 0);
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123463;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
