@@ -1,5 +1,5 @@
 <?php
-include('Database.php');
+include('server-code/database.php');
 
 class Post{
     // Atributos
