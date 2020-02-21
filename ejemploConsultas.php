@@ -1,5 +1,5 @@
 <?php
-include('database.php');
+include('server-code/database.php');
 $cards = '';
 
 // Consulta para traer todos los posts
