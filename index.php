@@ -1,5 +1,31 @@
 <?php 
     include 'templates/nav-template.php';
+    include 'server-code/database.php';
+
+    // Consulta 1
+ $sql = "SELECT * FROM post WHERE id=2";
+ $res = mysqli_query($conn, $sql);
+ $noticia1 = mysqli_fetch_assoc($res);
+   // Consulta 2
+   $sql1 = "SELECT * FROM post WHERE id=3";
+   $res1 = mysqli_query($conn, $sql1);
+   $noticia2 = mysqli_fetch_assoc($res1);
+  
+     // Consulta 3
+     $sql2 = "SELECT * FROM post WHERE id=4";
+     $res2 = mysqli_query($conn, $sql2);
+     $noticia3 = mysqli_fetch_assoc($res2);
+    
+    // Consulta 4
+    $sql3 = "SELECT * FROM post WHERE id=5";
+    $res3 = mysqli_query($conn, $sql3);
+    $noticia4 = mysqli_fetch_assoc($res3);
+
+       // Consulta 5
+       $sql4 = "SELECT * FROM post WHERE id=6";
+       $res4 = mysqli_query($conn, $sql4);
+       $noticia5 = mysqli_fetch_assoc($res4);
+      
 ?>
 
 <head>
@@ -50,11 +76,10 @@
     <h1>Noticias</h1>
     <div class="row">   
         <div class="col p-10 m-5">
-            <div class="card" style="width: 100%;">
-                 <img src="..." class="card-img-top" alt="...">
+            <div class="card" style="width: 100%;"><img height="300px" width="100%" src="<?php echo $noticia1['imagen']?>" class="card-img-top" alt="..."> 
                     <div class="card-body">
-                    <h5 class="card-title">Noticia</h5>
-                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h5 class="card-title"><?php echo $noticia1['titulo'] ?></h5>
+                    <p class="card-text"><?php echo $noticia1['contenido'] ?></p>
                     <a href="#" class="btn btn-dark">Leer más...</a>
                     </div>
             </div>
@@ -62,11 +87,11 @@
     </div>
     <div class="row">   
         <div class="col p-10 m-5">
-            <div class="card" style="width: 100%;">
-                 <img src="..." class="card-img-top" alt="...">
+        <div class="card" 
+        style="width: 100%;"><img height="300px" width="100%" src="<?php echo $noticia2['imagen']?>" class="card-img-top" alt="..."> 
                     <div class="card-body">
-                    <h5 class="card-title">Noticia</h5>
-                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h5 class="card-title"><?php echo $noticia2['titulo'] ?></h5>
+                    <p class="card-text"><?php echo $noticia2['contenido'] ?></p>
                     <a href="#" class="btn btn-dark">Leer más...</a>
                     </div>
             </div>
@@ -78,39 +103,40 @@
  <div class="row">   
      <div class="col p-10 m-5">
         <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+        <img height="200px" width="100%" src="<?php echo $noticia4['imagen']?>" class="card-img-top" alt="..."> 
+        
             <div class="card-body">
              <h5 class="card-title">Noticia</h5>
-                <span class="badge badge-secondary">Fecha</span>
-                <span class="badge badge-dark">Categoria</span>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <span class="badge badge-secondary"><?php echo $noticia4['fecha_edicion']?></span>
+                <span class="badge badge-dark"><?php echo $noticia4['categoria']?></span>
+                <p class="card-text"><?php echo $noticia4['titulo'] ?></p>
                 <a href="#" class="btn btn-dark">Leer más...</a>
             </div>
          </div>
     </div>
     <div class="col p-10 m-5 ">
         <div class="card" style="width: 18rem;">
-             <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-            <h5 class="card-title">Otra Noticia</h5>
-                <span class="badge badge-secondary">Fecha</span>
-                <span class="badge badge-dark">Categoria</span>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-dark">Leer más...</a>
-            </div>
+        <img height="178px" width="100%" src="<?php echo $noticia3['imagen']?>" class="card-img-top" alt="..."> 
+        <div class="card-body">
+         <h5 class="card-title">Noticia</h5>
+            <span class="badge badge-secondary"><?php echo $noticia3['fecha_edicion']?></span>
+            <span class="badge badge-dark"><?php echo $noticia3['categoria']?></span>
+            <p class="card-text"><?php echo $noticia3['titulo'] ?></p>
+            <a href="#" class="btn btn-dark">Leer más...</a>
+        </div>
         </div>
     </div>
     <div class="col p-10 m-5">
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-             <h5 class="card-title">Noticia</h5>
-                <span class="badge badge-secondary">Fecha</span>
-                <span class="badge badge-dark">Categoria</span>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-dark">Leer más...</a>
-            </div>
-         </div>
+    <div class="card" style="width: 18rem;">
+        <img height="180px" width="100%" src="<?php echo $noticia5['imagen']?>" class="card-img-top" alt="..."> 
+        <div class="card-body">
+         <h5 class="card-title">Noticia</h5>
+            <span class="badge badge-secondary"><?php echo $noticia5['fecha_edicion']?></span>
+            <span class="badge badge-dark"><?php echo $noticia5['categoria']?></span>
+            <p class="card-text"><?php echo $noticia5['titulo'] ?></p>
+            <a href="#" class="btn btn-dark">Leer más...</a>
+        </div>
+        </div>
     </div>
 </div>
 </section>
