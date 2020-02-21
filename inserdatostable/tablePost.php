@@ -88,8 +88,8 @@ $allPOST = $post->getPost();
                                 echo "<td> $dtpost->categoria </td>";
                                 echo "<td> $dtpost->fecha_edicion </td>";  
                                 
-                                echo "<td> $dtuser->modi <button >Modificar</button></td>";
-                                echo "<td> $dtuser->modi <button >Eliminar</button></td>";
+                                echo "<td> <input type='submit' name='boton' value='modificar'></td>";
+                                echo "<td> <input type='submit' name='boton' value='eliminar'></td>";
 
                                 echo "</tr> ";
                             }
