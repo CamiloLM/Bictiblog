@@ -73,7 +73,7 @@
             <span class="badge badge-secondary"><?php echo $noticia['fecha_edicion']?></span>
             <span class="badge badge-dark"><?php echo $noticia['categoria']?></span>
             <p class="card-text"><?php echo $noticia['titulo'] ?></p>
-            <a href="noticiaDetalle" class="btn btn-dark" <?php  $noticia['id']  ?>>Leer más...</a>
+            <a href="noticiaDetalle.php" class="btn btn-dark" <?php  $noticia['id']  ?>>Leer más...</a>
         </div>
          </div>
     </div>
@@ -85,7 +85,7 @@
             <span class="badge badge-secondary"><?php echo $noticia1['fecha_edicion']?></span>
             <span class="badge badge-dark"><?php echo $noticia1['categoria']?></span>
             <p class="card-text"><?php echo $noticia1['titulo'] ?></p>
-            <a href="noticiaDetalle" class="btn btn-dark" <?php  $noticia1['id']  ?>>Leer más...</a>
+            <a href="noticiaDetalle.php" class="btn btn-dark" <?php  $noticia1['id']  ?>>Leer más...</a>
         </div>
         </div>
     </div>
@@ -97,7 +97,7 @@
             <span class="badge badge-secondary"><?php echo $noticia2['fecha_edicion']?></span>
             <span class="badge badge-dark"><?php echo $noticia2['categoria']?></span>
             <p class="card-text"><?php echo $noticia2['titulo'] ?></p>
-            <a href="noticiaDetalle" class="btn btn-dark" <?php  $noticia2['id']  ?>>Leer más...</a>
+            <a href="noticiaDetalle.php" class="btn btn-dark" <?php  $noticia2['id']  ?>>Leer más...</a>
         </div>
          </div>
     </div>
@@ -114,7 +114,7 @@
             <span class="badge badge-secondary"><?php echo $noticia3['fecha_edicion']?></span>
             <span class="badge badge-dark"><?php echo $noticia3['categoria']?></span>
             <p class="card-text"><?php echo $noticia3['titulo'] ?></p>
-            <a href="noticiaDetalle" class="btn btn-dark" <?php  $noticia3['id']  ?>>Leer más...</a>
+            <a href="noticiaDetalle.php" class="btn btn-dark" <?php  $noticia3['id']  ?>>Leer más...</a>
         </div>
          </div>
     </div>
@@ -126,7 +126,7 @@
             <span class="badge badge-secondary"><?php echo $noticia4['fecha_edicion']?></span>
             <span class="badge badge-dark"><?php echo $noticia4['categoria']?></span>
             <p class="card-text"><?php echo $noticia4['titulo'] ?></p>
-            <a href="noticiaDetalle" class="btn btn-dark" <?php  $noticia4['id']  ?>>Leer más...</a>
+            <a href="noticiaDetalle.php" class="btn btn-dark" <?php  $noticia4['id']  ?>>Leer más...</a>
         </div>
         </div>
     </div>
@@ -138,7 +138,7 @@
             <span class="badge badge-secondary"><?php echo $noticia5['fecha_edicion']?></span>
             <span class="badge badge-dark"><?php echo $noticia5['categoria']?></span>
             <p class="card-text"><?php echo $noticia5['titulo'] ?></p>
-            <a href="noticiaDetalle" class="btn btn-dark" <?php  $noticia5['id']  ?>>Leer más...</a>
+            <a href="noticiaDetalle.php" class="btn btn-dark" <?php  $noticia5['id']  ?>>Leer más...</a>
         </div>
          </div>
     </div>
@@ -155,7 +155,7 @@
             <span class="badge badge-secondary"><?php echo $noticia6['fecha_edicion']?></span>
             <span class="badge badge-dark"><?php echo $noticia6['categoria']?></span>
             <p class="card-text"><?php echo $noticia6['titulo'] ?></p>
-            <a href="noticiaDetalle" class="btn btn-dark" <?php  $noticia6['id']  ?>>Leer más...</a>
+            <a href="noticiaDetalle.php" class="btn btn-dark" <?php  $noticia6['id']  ?>>Leer más...</a>
         </div>
          </div>
     </div>
@@ -167,7 +167,7 @@
             <span class="badge badge-secondary"><?php echo $noticia7['fecha_edicion']?></span>
             <span class="badge badge-dark"><?php echo $noticia7['categoria']?></span>
             <p class="card-text"><?php echo $noticia7['titulo'] ?></p>
-            <a href="noticiaDetalle" class="btn btn-dark" <?php  $noticia7['id']  ?>>Leer más...</a>
+            <a href="noticiaDetalle.php" class="btn btn-dark" <?php  $noticia7['id']  ?>>Leer más...</a>
         </div>
         </div>
     </div>
@@ -179,7 +179,7 @@
             <span class="badge badge-secondary"><?php echo $noticia8['fecha_edicion']?></span>
             <span class="badge badge-dark"><?php echo $noticia8['categoria']?></span>
             <p class="card-text"><?php echo $noticia8['titulo'] ?></p>
-            <a href="noticiaDetalle" class="btn btn-dark" <?php  $noticia8['id']  ?>>Leer más...</a>
+            <a href="noticiaDetalle.php" class="btn btn-dark" <?php  $noticia8['id']  ?>>Leer más...</a>
         </div>
          </div>
     </div>
