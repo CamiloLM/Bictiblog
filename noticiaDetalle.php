@@ -15,14 +15,22 @@
                 <h1><?php echo $noticia['titulo'];?></h1>
             </div>
         </div>
-
-        <div class="imagen-container">
-            <img width="600px" height="400px" src="<?php echo $noticia['imagen'];?>" alt=""> 
+        <div class="imagen-container ">
+            <div class="row">
+                <img class="col" width="600px" height="400px" src="<?php echo $noticia['imagen'];?>" alt=""> 
+            </div>
         </div>
         <div class="contenido" style="padding:30px;">
         <?php 
             echo $noticia ['contenido'];
         ?>    
+        </div>
+        <div class="container comment">
+            <div class="colrow">
+                    <textarea class="comentarios col" name="comentarios" rows="10" cols="40">Escribe aquí tus comentarios</textarea>
+                    <button class="btn-bit col">Comentar</button>
+             </div>
+             <br>
         </div>
     </div>
 </div>
