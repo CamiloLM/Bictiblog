@@ -7,13 +7,13 @@ if (isset($_GET['error'])) {
       <span aria-hidden='true'>&times;</span>
     </button>
   </div>";
- 
 }
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,6 +22,7 @@ if (isset($_GET['error'])) {
     <link rel="stylesheet" href="css/style_login.css">
     <link rel="icon" href="../assets/img/logo.jpeg">
 </head>
+
 <body>
     <div class="container">
         <a href="index.php"><img src="images/bit.png" class="logo" alt=""></a>
@@ -34,21 +35,21 @@ if (isset($_GET['error'])) {
         <div class="formulario">
             <h2>Iniciar Sesión</h2>
             <form method="POST" action="server-code/verificacionUsuario.php">
-            <input type="text" name="tnombre" placeholder="Usuario" required>
-            <input type="password" name="usupas" placeholder="Contraseña" required>
-            <input type="submit" value="Iniciar Sesión">
-        </form>
+                <input type="text" name="tnombre" placeholder="Usuario" required>
+                <input type="password" name="usupas" placeholder="Contraseña" required>
+                <input type="submit" value="Iniciar Sesión">
+            </form>
         </div>
 
         <div class="formulario">
             <h2>Crea tu cuenta</h2>
-            <form method="POST" action="server-code/crearUsuario.php" >
-                    <input name="crearusuario" placeholder="Usuario"  Type ="text" required></input><BR>
-                    <input  name="crearclave" placeholder="Contraseña" Type ="password" required></input><BR>
-                    <input  name="crearemail" placeholder="Correo" Type ="Email" required></input><BR>
-                    <input type="submit" value="Registrate">
-            
-        </form>
+            <form method="POST" action="server-code/crearUsuario.php">
+                <input name="crearusuario" placeholder="Usuario" Type="text" required></input><BR>
+                <input name="crearclave" placeholder="Contraseña" Type="password" required></input><BR>
+                <input name="crearemail" placeholder="Correo" Type="Email" required></input><BR>
+                <input type="submit" value="Registrate">
+
+            </form>
         </div>
 
 
@@ -63,4 +64,5 @@ if (isset($_GET['error'])) {
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </body>
+
 </html>

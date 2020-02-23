@@ -1,7 +1,12 @@
 <?php
 session_start();
 
+$admin = "";
+
 if (isset($_SESSION) && !empty($_SESSION)) {
+    if( $_SESSION['role'] === '1'){
+        $admin = "<li class='item'><a href='admin/admin.php' class='nav-link'> Admin </a> </li>";
+    }
     $mensaje = " <form action='templates/nav-template.php' method='post' class='nav-login'>
     <span><img src='images/icons/person-24px.svg' alt=''></span>
         <h4 style= 'padding:5px;'>Hola, " . $_SESSION['user'] . "</h4>
@@ -14,19 +19,14 @@ if (isset($_SESSION) && !empty($_SESSION)) {
     </ul>";
 }
 
-// Funcion para terminar la sesion
-function terminarSesion()
-{
-    session_unset();
-    session_destroy();
-}
-
 // Evento para el boton
 if (isset($_POST['botonSalir'])) {
-    terminarSesion();
+    session_unset();
+    session_destroy();
     header('Location: ../index.php');
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,11 +51,10 @@ if (isset($_POST['botonSalir'])) {
                     </ul>
                 </li>
                 <li class="item"><a href="#" class="nav-link"> Acerca de </a> </li>
-                <li class="item"><span><a href="search.php"><img src="images/icons/search-24px.svg" alt=""></a></span></li>
+                <?= $admin ?>
             </ul>
         </div>
              <?= $mensaje ?>
-                <!-- <li><a href="login.php"><span class="glyphicon-log-in">Iniciar Sesion</span></a></li> -->
         </div>
     </div>        
 </nav>

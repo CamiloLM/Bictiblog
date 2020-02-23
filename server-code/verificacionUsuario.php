@@ -19,14 +19,12 @@ if (isset($_POST) && !empty($_POST)) {
                 var_dump($row);
                 $_SESSION['user'] = $row["usuario"];
                 $_SESSION['role'] = $row["rol"];
-                header("Location: ../admin.php");
+                header("Location: ../admin/");
             }
             if ($row['rol'] === "0") {
                 $_SESSION['user'] = $row["usuario"];
                 $_SESSION['role'] = $row["rol"];
                 header('Location: ../index.php');
-                // header('Location: ../templates/nav-template-user.php');
-                
             }
         }
     } else {

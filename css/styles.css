@@ -185,11 +185,6 @@ footer{
     border: solid 4px rgba(8, 8, 8, 0.849);
     border-radius: 3px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-/*********************DETALLE NOTICIAS**********************/
-
 .imagen-container{
     text-align: center;
 }
@@ -197,9 +192,16 @@ footer{
     width: 500px;
     height: 400px;
     object-fit:cover;
-  }
- 
-=======
->>>>>>> 9ab1a6528dc770cc11bcfebcacaa53ab4bf1d0ee
-=======
->>>>>>> f6eec3bab8dfaa48ddb6d1d0c42833252d437a10
+}
+
+table.dataTable thead {
+    background: #007bff;
+    color:white;
+}
+
+.caja{
+  padding: 5px;
+  box-shadow: 10px 10px 50px 1px #7c7c81;
+  border-radius: 10px;
+}
+
