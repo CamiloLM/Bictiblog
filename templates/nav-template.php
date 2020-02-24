@@ -5,7 +5,7 @@ $admin = "";
 
 if (isset($_SESSION) && !empty($_SESSION)) {
     if( $_SESSION['role'] === '1'){
-        $admin = "<li class='item'><a href='admin/admin.php' class='nav-link'> Admin </a> </li>";
+        $admin = "<li class='item'><a href='admin/index.php' class='nav-link'> Admin </a> </li>";
     }
     $mensaje = " <form action='templates/nav-template.php' method='post' class='nav-login'>
     <span><img src='images/icons/person-24px.svg' alt=''></span>
