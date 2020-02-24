@@ -1,8 +1,11 @@
 <?php 
     include 'templates/nav-template.php';
     include 'server-code/database.php';
-
-    $sql = "SELECT * FROM post WHERE id=2";
+    $id = 1;
+    if (isset($_GET['id'])&&!empty($_GET['id'])) {
+        $id = $_GET['id'];
+    }
+    $sql = "SELECT * FROM post WHERE id=$id";
     $res = mysqli_query($conn, $sql);
     $noticia = mysqli_fetch_assoc($res);
 ?>
