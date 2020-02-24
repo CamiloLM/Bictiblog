@@ -42,15 +42,8 @@ if (isset($_POST['botonSalir'])) {
         <div class="nav-options">
             <ul class="nav navbar-nav" >
                 <li class="item"><a href="index.php" class="nav-link"> Inicio </a></li>
-                <li class="item"><a href="#noticias" class="nav-link"> Noticias </a>
-                    <ul class="categorias">
-                        <li class="category"><a href="noticiasCategoria.php">categ 1</a> </li>
-                        <li class="category"><a href="">categ 2</a> </li>
-                        <li class="category"><a href="">categ 3</a> </li>
-                        <li class="category"><a href="">categ 4</a> </li>
-                    </ul>
-                </li>
-                <li class="item"><a href="#" class="nav-link"> Acerca de </a> </li>
+                <li class="item"><a href="noticias.php" class="nav-link"> Noticias </a></li>
+                <li class="item"><a href="about.php" class="nav-link"> Acerca de </a> </li>
                 <?= $admin ?>
             </ul>
         </div>
