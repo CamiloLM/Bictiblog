@@ -186,6 +186,9 @@ footer{
     border-radius: 3px;
 }
 
+.card img{
+    object-fit: cover;
+}
 
 
 /*********************DETALLE NOTICIAS**********************/

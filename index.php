@@ -76,7 +76,7 @@
     <h1>Noticias</h1>
     <div class="row">   
         <div class="col p-10 m-5">
-            <div class="card" style="width: 100%;"><img height="300px" width="100%" src="<?php echo $noticia1['imagen']?>" class="card-img-top" alt="..."> 
+            <div class="card" style="width: 100%;"><img height="300px" width="100%" src="<?php echo $noticia1['imagen']?>" class="col card-img-top" alt="...">    
                     <div class="card-body">
                     <h5 class="card-title"><?php echo $noticia1['titulo'] ?></h5>
                     <p class="card-text"><?php echo $noticia1['contenido'] ?></p>
