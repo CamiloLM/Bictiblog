@@ -51,7 +51,7 @@ if (isset($_POST['botonSalir'])) {
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <!-- CSS personalizado -->
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="styles.css">
 
     <!--datables CSS básico-->
     <link rel="stylesheet" type="text/css" href="assets/datatables/datatables.min.css" />
@@ -99,7 +99,7 @@ if (isset($_POST['botonSalir'])) {
         <div class="row">
             <div class="col-lg-12">
                 <div class="table-responsive">
-                    <table id="tablaPosts" class="table table-striped table-bordered table-condensed" style="width:100%">
+                    <table id="tablaPosts" class="table table-striped table-bordered table-condensed" style="width:100%; table-layout:fixed;">
                         <thead class="text-center">
                             <tr>
                                 <th>Id</th>
